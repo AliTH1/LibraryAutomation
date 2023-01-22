@@ -188,5 +188,13 @@ namespace LibraryAutomation
                 book.getBookYearOfRelease());
             }
         }
+
+        private void btn_logout_admin_Click(object sender, EventArgs e)
+        {
+            Hide();
+            MessageBox.Show("Вы вышли из аккаунта", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Form1 login_page = new Form1();
+            login_page.Show();
+        }
     }
 }

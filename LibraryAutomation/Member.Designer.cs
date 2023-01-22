@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btn_search = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBox_search = new System.Windows.Forms.TextBox();
             this.btn_refresh = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -47,28 +47,32 @@
             // 
             // btn_search
             // 
+            this.btn_search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_search.Location = new System.Drawing.Point(12, 12);
             this.btn_search.Name = "btn_search";
             this.btn_search.Size = new System.Drawing.Size(77, 34);
             this.btn_search.TabIndex = 0;
             this.btn_search.Text = "Search";
-            this.btn_search.UseVisualStyleBackColor = true;
+            this.btn_search.UseVisualStyleBackColor = false;
+            this.btn_search.Click += new System.EventHandler(this.btn_search_Click);
             // 
-            // textBox1
+            // txtBox_search
             // 
-            this.textBox1.Location = new System.Drawing.Point(95, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(97, 31);
-            this.textBox1.TabIndex = 2;
+            this.txtBox_search.Location = new System.Drawing.Point(95, 12);
+            this.txtBox_search.Name = "txtBox_search";
+            this.txtBox_search.Size = new System.Drawing.Size(97, 31);
+            this.txtBox_search.TabIndex = 2;
             // 
             // btn_refresh
             // 
+            this.btn_refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btn_refresh.Location = new System.Drawing.Point(198, 9);
             this.btn_refresh.Name = "btn_refresh";
             this.btn_refresh.Size = new System.Drawing.Size(86, 34);
             this.btn_refresh.TabIndex = 0;
             this.btn_refresh.Text = "Refresh";
-            this.btn_refresh.UseVisualStyleBackColor = true;
+            this.btn_refresh.UseVisualStyleBackColor = false;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
             // dateTimePicker1
             // 
@@ -172,7 +176,7 @@
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBox_search);
             this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.btn_search);
             this.Name = "Member";
@@ -188,7 +192,7 @@
         #endregion
 
         private Button btn_search;
-        private TextBox textBox1;
+        private TextBox txtBox_search;
         private Button btn_refresh;
         private DateTimePicker dateTimePicker1;
         private DataGridView dataGridView1;

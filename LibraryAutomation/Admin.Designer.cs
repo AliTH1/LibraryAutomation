@@ -52,6 +52,13 @@
             this.lbl_id = new System.Windows.Forms.Label();
             this.lbl_members = new System.Windows.Forms.Label();
             this.dataGridView_members = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdData = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.authority = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView_Books = new System.Windows.Forms.DataGridView();
             this.bookid = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,13 +99,7 @@
             this.btn_refresh_books = new System.Windows.Forms.Button();
             this.btn_search_books = new System.Windows.Forms.Button();
             this.txtBox_search_books = new System.Windows.Forms.TextBox();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdData = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.authority = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_logout_admin = new System.Windows.Forms.Button();
             this.groupBox_member_transactions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_members)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Books)).BeginInit();
@@ -319,6 +320,55 @@
             this.dataGridView_members.Size = new System.Drawing.Size(761, 319);
             this.dataGridView_members.TabIndex = 4;
             this.dataGridView_members.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_members_CellClick);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 8;
+            this.id.Name = "id";
+            this.id.Width = 90;
+            // 
+            // name
+            // 
+            this.name.HeaderText = "Name";
+            this.name.MinimumWidth = 8;
+            this.name.Name = "name";
+            this.name.Width = 90;
+            // 
+            // surname
+            // 
+            this.surname.HeaderText = "Surname";
+            this.surname.MinimumWidth = 8;
+            this.surname.Name = "surname";
+            this.surname.Width = 90;
+            // 
+            // createdData
+            // 
+            this.createdData.HeaderText = "Created Data";
+            this.createdData.MinimumWidth = 8;
+            this.createdData.Name = "createdData";
+            this.createdData.Width = 90;
+            // 
+            // username
+            // 
+            this.username.HeaderText = "Username";
+            this.username.MinimumWidth = 8;
+            this.username.Name = "username";
+            this.username.Width = 90;
+            // 
+            // password
+            // 
+            this.password.HeaderText = "Password";
+            this.password.MinimumWidth = 8;
+            this.password.Name = "password";
+            this.password.Width = 90;
+            // 
+            // authority
+            // 
+            this.authority.HeaderText = "Authority";
+            this.authority.MinimumWidth = 8;
+            this.authority.Name = "authority";
+            this.authority.Width = 90;
             // 
             // label1
             // 
@@ -720,60 +770,23 @@
             this.txtBox_search_books.Size = new System.Drawing.Size(86, 31);
             this.txtBox_search_books.TabIndex = 6;
             // 
-            // id
+            // btn_logout_admin
             // 
-            this.id.HeaderText = "ID";
-            this.id.MinimumWidth = 8;
-            this.id.Name = "id";
-            this.id.Width = 90;
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Name";
-            this.name.MinimumWidth = 8;
-            this.name.Name = "name";
-            this.name.Width = 90;
-            // 
-            // surname
-            // 
-            this.surname.HeaderText = "Surname";
-            this.surname.MinimumWidth = 8;
-            this.surname.Name = "surname";
-            this.surname.Width = 90;
-            // 
-            // createdData
-            // 
-            this.createdData.HeaderText = "Created Data";
-            this.createdData.MinimumWidth = 8;
-            this.createdData.Name = "createdData";
-            this.createdData.Width = 90;
-            // 
-            // username
-            // 
-            this.username.HeaderText = "Username";
-            this.username.MinimumWidth = 8;
-            this.username.Name = "username";
-            this.username.Width = 90;
-            // 
-            // password
-            // 
-            this.password.HeaderText = "Password";
-            this.password.MinimumWidth = 8;
-            this.password.Name = "password";
-            this.password.Width = 90;
-            // 
-            // authority
-            // 
-            this.authority.HeaderText = "Authority";
-            this.authority.MinimumWidth = 8;
-            this.authority.Name = "authority";
-            this.authority.Width = 90;
+            this.btn_logout_admin.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btn_logout_admin.Location = new System.Drawing.Point(18, 849);
+            this.btn_logout_admin.Name = "btn_logout_admin";
+            this.btn_logout_admin.Size = new System.Drawing.Size(146, 48);
+            this.btn_logout_admin.TabIndex = 7;
+            this.btn_logout_admin.Text = "Logout";
+            this.btn_logout_admin.UseVisualStyleBackColor = false;
+            this.btn_logout_admin.Click += new System.EventHandler(this.btn_logout_admin_Click);
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1630, 855);
+            this.ClientSize = new System.Drawing.Size(1630, 909);
+            this.Controls.Add(this.btn_logout_admin);
             this.Controls.Add(this.txtBox_search_books);
             this.Controls.Add(this.btn_search_books);
             this.Controls.Add(this.txtBox_search_members);
@@ -788,6 +801,7 @@
             this.Controls.Add(this.groupBox_member_transactions);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "Admin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.Admin_Load);
             this.groupBox_member_transactions.ResumeLayout(false);
@@ -871,5 +885,6 @@
         private DataGridViewTextBoxColumn username;
         private DataGridViewTextBoxColumn password;
         private DataGridViewTextBoxColumn authority;
+        private Button btn_logout_admin;
     }
 }
